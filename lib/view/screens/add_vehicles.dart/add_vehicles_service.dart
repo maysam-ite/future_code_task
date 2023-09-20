@@ -83,7 +83,7 @@ class AddVehiclesService {
         } else if (response.statusCode == 400) {
           return const Left(StatuseRequest.validationfailuer);
         } else if (response.statusCode == 422) {
-          return const Left(StatuseRequest.missingimage);
+          return const Left(StatuseRequest.validationfailuer);
         } else if (response.statusCode == 401) {
           return const Left(StatuseRequest.authfailuer);
         } else {

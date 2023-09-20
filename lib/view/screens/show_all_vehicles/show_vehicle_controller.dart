@@ -5,7 +5,7 @@ import '../../../constant/status_request.dart';
 import '../../../data/Models/vehicle_model.dart';
 import '../../../general_controller/statuse_request_controller.dart';
 import '../../../main.dart';
-import '../../widget/no_internet_page.dart';
+import '../../widget/snak_bar_for_errors.dart';
 
 class ShowAllVehicleController extends GetxController  implements StatuseRequestController{
    ShowAllVehiclesService service = ShowAllVehiclesService();
@@ -28,7 +28,7 @@ class ShowAllVehicleController extends GetxController  implements StatuseRequest
     if (statuseRequest == StatuseRequest.success) {
       return whenGetDataSuccess(response);
     } else if (statuseRequest == StatuseRequest.authfailuer) {
-      //  snackBarForErrors("Auth error","Please login again");
+       snackBarForErrors("خطأ في المصادقة","رجاءا أعد تسجيل الدخول");
         Get.offAllNamed('LoginPage');
     } else {
       // when happen a mestake we handel it here

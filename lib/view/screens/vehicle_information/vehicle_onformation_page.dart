@@ -10,6 +10,7 @@ import '../../../constant/server_const.dart';
 import '../../../constant/theme.dart';
 import '../../widget/my_button.dart';
 
+// ignore: must_be_immutable
 class VehocleInformationPage extends StatelessWidget {
   VehocleInformationPage({super.key});
   vehicleInformationController controller = Get.find();

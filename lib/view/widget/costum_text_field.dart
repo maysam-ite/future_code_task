@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 import '../../constant/fonts.dart';
 import '../../constant/theme.dart';
@@ -66,8 +65,6 @@ class CostumTextField extends StatelessWidget {
             errorMaxLines: 1,
             border: UnderlineInputBorder(
               borderSide: BorderSide(color: PublicColors().labelColor),
-                // borderRadius: BorderRadius.circular(
-                //     reduis == null ? 5 : reduis as double)
                     ),
             label: label != null
                 ? Text(

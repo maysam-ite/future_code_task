@@ -47,11 +47,9 @@ class AddPhotoController extends GetxController implements  StatuseRequestContro
       if (statuseRequest == StatuseRequest.success) {
         whenAddSuccess(response);
       } else if (statuseRequest == StatuseRequest.authfailuer) {
-        // snackBarForErrors("Auth error", "Please login again");
-        Get.offAllNamed('LoginPage');
-      } else if (statuseRequest == StatuseRequest.validationfailuer) {
-        snackBarForErrors("Inputs wrong", "Please theck your inputs");
-        Get.back();
+        snackBarForErrors("خطأ في المصادقة","رجاءا أعد تسجيل الدخول");
+       } else if (statuseRequest == StatuseRequest.validationfailuer) {
+        snackBarForErrors("خطأ في الادخال", "يرجى اعادة الادخال");
       } else {
         snackBarForErrors("Server error", "Please try again later");
       }

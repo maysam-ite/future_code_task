@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import '../../../constant/status_request.dart';
 import '../../../general_controller/statuse_request_controller.dart';
 import '../../../main.dart';
+import '../../widget/snak_bar_for_errors.dart';
 import 'login_service.dart';
 
 class LoginController extends GetxController     implements StatuseRequestController{
@@ -43,10 +44,10 @@ class LoginController extends GetxController     implements StatuseRequestContro
       if (statuseRequest == StatuseRequest.success) {
         whenLoginSuccess(response);
       } else if (statuseRequest == StatuseRequest.authfailuer) {
-        // snackBarForErrors();
-      } else if (statuseRequest == StatuseRequest.validationfailuer) {
-        // snackBarForErrors();
-      } else {
+        snackBarForErrors("خطأ في المصادقة","رجاءا أعد تسجيل الدخول");
+       } else if (statuseRequest == StatuseRequest.validationfailuer) {
+        snackBarForErrors("Input error","Please Try again");
+       } else {
         // snackBarForErrors();
       }
     }

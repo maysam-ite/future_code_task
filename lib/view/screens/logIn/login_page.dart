@@ -97,7 +97,7 @@ class LoginPage extends StatelessWidget {
       ),
       sucer: false,
       validat: (value) {
-        if (value!.length>10||value!.length<10) {
+        if (value!.length>10||value.length<10) {
           return (("The phone number should be 10 digit").tr);
 
           ///add for translate

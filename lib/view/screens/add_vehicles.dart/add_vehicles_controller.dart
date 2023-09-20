@@ -47,10 +47,10 @@ class AddVehicleController extends GetxController
     if (statuseRequest == StatuseRequest.success) {
       whenGetTypesSuccess(response);
     } else if (statuseRequest == StatuseRequest.authfailuer) {
-      // snackBarForErrors("Auth error", "Please login again");
-      Get.offAllNamed('LoginPage');
+      snackBarForErrors("خطأ في المصادقة","رجاءا أعد تسجيل الدخول");
+       Get.offAllNamed('LoginPage');
     } else if (statuseRequest == StatuseRequest.validationfailuer) {
-      // snackBarForErrors("Inputs wrong", "Please theck your inputs");
+      snackBarForErrors("خطأ في الادخال", "يرجى اعادة الادخال");
     } else {
       // snackBarForErrors("Server error", "Please try again later");
     }

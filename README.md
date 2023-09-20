@@ -1,16 +1,8 @@
 # future_code_task
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+this project building on mvc structure
+fist of all think there is  dirctory "constant" conatins a sizes and server end points
+and every think relating in themes
+in "data " dirctory there is a models 
+in "view " dirctory there is a pages and widges 
+in eatch page dirctory there is a page,controller,srevice and binding files

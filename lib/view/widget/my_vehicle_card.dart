@@ -43,7 +43,10 @@ class MyVehicleCard extends StatelessWidget {
                           )
                         : Image.network(
                             "${ServerConstApis.baseAPI}/${model.vehicleImage}",
-                            fit: BoxFit.cover),
+                            fit: BoxFit.cover, errorBuilder: (context, Exception, StackTrace) {
+                      return Image.asset('asset/images/carjpg.jpg',
+                          fit: BoxFit.cover);
+                    }),
                   ),
                 ),
                 Text(

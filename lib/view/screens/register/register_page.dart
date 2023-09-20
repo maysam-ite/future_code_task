@@ -166,7 +166,7 @@ class RegisterPage extends StatelessWidget {
       mycolor: PublicColors().buttonColor,
       myRadius: size.buttonRadius,
       ontap: () {
-        print("object");
+       
         controller.onPressRegister();
       },
       mywidth: size.normalButtonWidht,
@@ -205,20 +205,38 @@ class RegisterPage extends StatelessWidget {
             child: AutoSizeText(
               "تسحيل الدخول".tr,
               style: TextStyle(
+                decoration: TextDecoration.underline,
                   color: PublicColors().iconColor,
                   fontWeight: FontWeight.bold,
                   fontSize: 15),
             ),
             onTap: () {
-              // Get.offAllnamed('/LoginPage');
+              Get.offAllNamed('/');
             },
           ),
         ],
       ),
     );
-  }
+  }//  
+  //
+  //
+  //
   Widget rulesText(Sizes size){
-    return const Text("متابعتك تعني موافقتك على الشروط والأحكام وسياسة الخصوصية");
+    return RichText(
+      textAlign: TextAlign.center,
+      text: TextSpan(
+      text:'متابعتك تعني موافقتك على',style: generalTextStyle(15) ,
+      children: [
+        TextSpan(text: 'الشروط والأحكام وسياسة الخصوصية',style:TextStyle(
+                decoration: TextDecoration.underline,
+                  color: PublicColors().iconColor,
+                  fontWeight: FontWeight.bold,
+                  // overflow: TextOverflow.ellipsis,
+                  fontSize: 15))
+      ]
+    ),
+    
+    );
   }
   Widget theRegisterColumnBody(Sizes size) {
     return ListView(

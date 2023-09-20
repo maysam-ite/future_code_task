@@ -18,7 +18,13 @@ class ShowAllVehiclePage extends StatelessWidget {
     final Sizes size = Sizes(context);
     return GetBuilder<ShowAllVehicleController>(builder: (ccontext) {
       return Scaffold(
-          body: ListView(
+          body: controller.statuseRequest==StatuseRequest.loading?Center(
+            child: CircularProgressIndicator(
+              color: PublicColors().labelColor,
+            ),
+          ):
+           ListView(
+            padding: EdgeInsets.symmetric(horizontal: size.finalWidth*20),
         children: [
           SizedBox(
             height: size.finalHeight * 37,

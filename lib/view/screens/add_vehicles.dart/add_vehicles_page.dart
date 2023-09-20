@@ -34,12 +34,12 @@ class AddVehiclePage extends StatelessWidget {
                   Container(
                     alignment: Alignment.center,
                     child: const Text(
-                      'مركباتي',
+                      'إضافة مركبة',
                       style: TextStyle(fontSize: 20),
-                    ),
+                     ),
                   ),
                   SizedBox(
-                    width: size.finalWidth * 123,
+                    width: size.finalWidth * 100,
                   ),
                   Container(
                     height: size.finalHeight * 40,
@@ -211,7 +211,7 @@ class AddVehiclePage extends StatelessWidget {
       
           Icon(Icons.type_specimen_outlined,
               color: PublicColors().iconColor, size: 15),
-          SizedBox(width: size.finalWidth * 12), // Spacer
+          SizedBox(width: size.finalWidth * 17), // Spacer
           Text(
             'نوع المركبة',
             style: TextStyle(
@@ -247,11 +247,7 @@ class AddVehiclePage extends StatelessWidget {
       ),
     ]);
   }
-  /*
-
-  
-   */
-
+ 
   Widget vehicleNumber(Sizes size) {
     return CostumTextField(
       labelStyle: TextStyle(color: PublicColors().textInsideButtonColor),
@@ -262,6 +258,7 @@ class AddVehiclePage extends StatelessWidget {
       hint: ' : رقم اللوحة',
       hintStyle: TextStyle(
           fontFamily: jostFontFamily,
+          fontSize: 15,
           color: PublicColors().buttonColor,
           fontWeight: FontWeight.w500),
       suffixIcon:
@@ -284,13 +281,15 @@ class AddVehiclePage extends StatelessWidget {
       SizedBox(width: size.finalWidth*15,),
           Icon(Icons.format_color_fill_sharp,
               color: PublicColors().iconColor, size: 15),
-          SizedBox(width: size.finalWidth * 12), // Spacer
+          SizedBox(width: size.finalWidth * 17), // Spacer
           Text(
             'لون المركبة',
-            style: TextStyle(
-                fontFamily: jostFontFamily,
-                color: PublicColors().buttonColor,
-                fontWeight: FontWeight.w500),
+            style:TextStyle(
+          fontFamily: jostFontFamily,
+          color: PublicColors().buttonColor,
+          fontWeight: FontWeight.w500,
+          fontSize: 15
+          ),
           ),
           const Spacer(),
           DropdownButton<String>(
@@ -310,7 +309,7 @@ class AddVehiclePage extends StatelessWidget {
           ),
         ],
       ),
-      SizedBox(height: size.finalHeight * 5), // Spacer
+      // SizedBox(height: size.finalHeight * 5), // Spacer
       // Spacer
 
       // Divider

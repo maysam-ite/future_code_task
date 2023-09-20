@@ -8,6 +8,8 @@ import 'package:future_code_task/view/screens/register/register_binding.dart';
 import 'package:future_code_task/view/screens/register/register_page.dart';
 import 'package:future_code_task/view/screens/show_all_vehicles/show_vehicle_binding.dart';
 import 'package:future_code_task/view/screens/show_all_vehicles/show_vehicle_page.dart';
+import 'package:future_code_task/view/screens/vehicle_information/vehicle_onformation_binding.dart';
+import 'package:future_code_task/view/screens/vehicle_information/vehicle_onformation_page.dart';
 import 'package:get/get.dart';
 
 appRoutes() => [
@@ -25,5 +27,7 @@ appRoutes() => [
      
   GetPage(
           name: '/AddVehicle', page: () => AddVehiclePage(), binding: AddVehicleBinding()),
+  GetPage(
+          name: '/VehicleInformation', page: () => VehocleInformationPage(), binding: ShowVehicleInformationBinding()),
      
      ];

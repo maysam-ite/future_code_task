@@ -13,6 +13,7 @@ class VehicleModel {
   String createdAt;
   String updatedAt;
   Type type;
+  bool isSelected;
 
   VehicleModel({
     required this.id,
@@ -29,10 +30,12 @@ class VehicleModel {
     required this.createdAt,
     required this.updatedAt,
     required this.type,
+    required this.isSelected
   });
 
   factory VehicleModel.fromJson(Map<String, dynamic> json) {
     return VehicleModel(
+      isSelected: false,
       id: json['id'],
       vehicleTypeId: json['vehicle_type_id'],
       userId: json['user_id'],

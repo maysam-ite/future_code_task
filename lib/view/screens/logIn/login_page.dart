@@ -147,6 +147,8 @@ class LoginPage extends StatelessWidget {
           child: AutoSizeText(
             "إنشاء حساب".tr,
             style: TextStyle(
+               decoration: TextDecoration.underline,
+               
                 color:PublicColors().iconColor,
                 fontWeight: FontWeight.bold,
                 fontSize: 15),

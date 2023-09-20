@@ -58,6 +58,7 @@ class CostumTextField extends StatelessWidget {
         onTap: onTap,
         keyboardType: inputtype,
         decoration: InputDecoration(
+          contentPadding:const EdgeInsets.symmetric(horizontal: 10, vertical: 17),
             hintText: hint,
             hintMaxLines: 1,
             hintStyle: hintStyle,
@@ -86,7 +87,7 @@ class CostumTextField extends StatelessWidget {
               // borderRadius: BorderRadius.circular(
               //     reduis == null ? 5 : reduis as double),
             ),
-            contentPadding: const EdgeInsets.symmetric(horizontal: 10)),
+            ),
       ),
     );
   }
